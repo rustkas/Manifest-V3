@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+
+        "name": "Page Info",
+            "version": "1.0.0",
+
+                "description": "Displays information about the current page.",
+
+                    "action": {
+        "default_title": "Page Info",
+            "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "activeTab"
+    ]
+}

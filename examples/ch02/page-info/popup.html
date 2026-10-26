@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Page Info</title>
+
+  <style>
+    body {
+      width: 320px;
+      padding: 16px;
+      font-family: system-ui, sans-serif;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    .label {
+      font-weight: 600;
+    }
+
+    .value {
+      word-break: break-word;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Page Info</h1>
+
+  <p>
+    <span class="label">Title:</span>
+    <span id="title" class="value">Loading...</span>
+  </p>
+
+  <p>
+    <span class="label">URL:</span>
+    <span id="url" class="value">Loading...</span>
+  </p>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>

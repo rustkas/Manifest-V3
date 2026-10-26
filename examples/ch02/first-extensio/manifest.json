@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "First Extension",
+  "version": "1.0.0",
+
+  "action": {
+    "default_title": "First Extension",
+     "default_popup": "popup.html"
+    
+  }
+}

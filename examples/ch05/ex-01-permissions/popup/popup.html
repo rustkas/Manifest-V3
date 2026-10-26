@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Exporter</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Web Exporter</h1>
+      <p id="page-info" class="page-info">Loading…</p>
+    </header>
+
+    <main>
+      <p class="description">Export current page</p>
+
+      <button id="export-btn" class="btn primary">Export</button>
+
+      <div id="status" class="status" aria-live="polite"></div>
+
+      <div id="permission-box" class="permission-box hidden">
+        <p class="permission-title">Host permission needed</p>
+        <p class="permission-text">
+          To read and export this page, the extension needs temporary access to its origin.
+        </p>
+        <div class="permission-actions">
+          <button id="grant-btn" class="btn primary small">Grant access</button>
+          <button id="deny-btn" class="btn secondary small">Not now</button>
+        </div>
+      </div>
+
+      <div class="footer-actions">
+        <button id="revoke-btn" class="btn link hidden">Revoke host access</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

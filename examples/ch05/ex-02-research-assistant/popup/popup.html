@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Assistant</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Research Assistant</h1>
+      <p id="context" class="context">Checking page…</p>
+    </header>
+
+    <section class="actions">
+      <button id="extract-btn" class="btn primary" disabled>Extract headings</button>
+      <button id="save-btn" class="btn secondary" disabled>Save result</button>
+    </section>
+
+    <div id="status" class="status" aria-live="polite"></div>
+
+    <section id="preview" class="preview hidden">
+      <h2>Headings</h2>
+      <ul id="headings-list"></ul>
+    </section>
+
+    <section class="saved">
+      <div class="saved-header">
+        <h2>Saved research</h2>
+        <button id="clear-btn" class="btn link">Clear all</button>
+      </div>
+      <ul id="saved-list" class="saved-list"></ul>
+    </section>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

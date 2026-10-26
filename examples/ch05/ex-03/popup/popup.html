@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Analyzer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Site Analyzer</h1>
+      <p id="context" class="context">Checking page…</p>
+    </header>
+
+    <!-- Main flow: example.com/articles -->
+    <section class="card">
+      <h2>example.com /articles</h2>
+      <p class="hint">Content script runs automatically on these pages.</p>
+      <button id="analyze-btn" class="btn primary" disabled>Analyze article</button>
+      <button id="save-btn" class="btn secondary" disabled>Save result</button>
+    </section>
+
+    <div id="status" class="status" aria-live="polite"></div>
+
+    <section id="preview" class="preview hidden">
+      <h2>Preview</h2>
+      <p id="preview-title" class="preview-title"></p>
+      <p id="preview-meta" class="preview-meta"></p>
+      <p id="preview-excerpt" class="preview-excerpt"></p>
+    </section>
+
+    <!-- Optional additional site -->
+    <section class="card optional">
+      <h2>Additional site (optional)</h2>
+      <p class="hint">Wikipedia — host permission requested only when you use this feature.</p>
+      <button id="optional-btn" class="btn outline">Analyze Wikipedia page</button>
+      <button id="revoke-btn" class="btn link hidden">Revoke Wikipedia access</button>
+    </section>
+
+    <section class="saved">
+      <div class="saved-header">
+        <h2>Saved results</h2>
+        <button id="clear-btn" class="btn link">Clear</button>
+      </div>
+      <ul id="saved-list" class="saved-list"></ul>
+    </section>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
